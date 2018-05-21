@@ -1,0 +1,75 @@
+﻿<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="m-subheader__title m-subheader__title--separator">
+                Users Feature
+            </h3>
+            <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                <li class="m-nav__item m-nav__item--home">
+                    <a href="#" class="m-nav__link m-nav__link--icon">
+                        <i class="m-nav__link-icon la la-home"></i>
+                    </a>
+                </li>
+                <li class="m-nav__separator">
+                    -
+                </li>
+                <li class="m-nav__item">
+                    <span class="m-nav__link-text">
+                        Users Feature Mapping
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+    <div class="m-portlet m-portlet--mobile">
+        <div class="m-portlet__body">
+            <!--begin: Search Form -->
+            <div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+                <div class="row align-items-center">
+                    <div class="col-xl-8 order-2 order-xl-1">
+                        <div class="form-group m-form__group row align-items-center">
+                            <div class="col-md-4">
+                                <div class="m-input-icon m-input-icon--left">
+                                    <select id="menuModule" class="hideLabel form-control" (change)="onModuleChange();">
+                                        <option value="">All Module</option>
+                                        <option *ngFor="let m of moduleList" value="{{m}}">
+                                            {{m}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="m-input-icon m-input-icon--left">
+                                    <select id="userFeature" class="hideLabel form-control" (change)="onUserChange();">
+                                        <option value="">Select User</option>
+                                        <option *ngFor="let k of userList" value="{{k.id}}">
+                                            {{k.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 order-1 order-xl-2 m--align-right">
+                        <button class="btn btn-outline-primary m-btn m-btn--icon m-btn--air" type="button" id="m_datatable_get">
+                            <span>
+                                <i class="fa fa-users"></i>
+                                <span>
+                                    Save Access
+                                </span>
+                            </span>
+                        </button>
+                        <div class="m-separator m-separator--dashed d-xl-none"></div>
+                    </div>
+                </div>
+            </div>
+            <!--end: Search Form -->  		<!--begin: Datatable -->
+            <div class="m_datatable" id="scrolling_both"></div>
+            <!--end: Datatable -->
+        </div>
+    </div>
+</div>
