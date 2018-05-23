@@ -21,9 +21,9 @@
 
             <li class="m-menu__item  m-menu__item--submenu" *ngFor="let item of _userMenuModuleList" routerLinkActive="m-menu__item--open" routerLinkActiveOptions="{ exact: true }" aria-haspopup="true" data-menu-submenu-toggle="hover">
                 <a href="#" class="m-menu__link m-menu__toggle">
-                    <i class="m-menu__link-icon flaticon-settings"></i>
+                    <i class="{{item.modulecssclass}}"></i>
                     <span class="m-menu__link-text">
-                        {{item.modulename}}
+                        {{item.menuname}}
                     </span>
                     <i class="m-menu__ver-arrow la la-angle-right"></i>
                 </a>
@@ -36,7 +36,7 @@
                                     <span></span>
                                 </i>
                                 <span class="m-menu__link-text">
-                                    {{subitem.menuName}}
+                                    {{subitem.menuname}}
                                 </span>
                             </a>
                         </li>

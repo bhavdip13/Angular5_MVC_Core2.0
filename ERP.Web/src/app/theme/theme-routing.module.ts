@@ -23,34 +23,10 @@ const routes: Routes = [
                 "path": "user\/fetch-user",
                 "loadChildren": ".\/pages\/components\/user\/fetchuser\/fetchUser.module#FetchUserModule"
             },
-            {
-                "path": "test\/mytest",
-                "loadChildren": ".\/pages\/components\/test\/mytest\/mytest.module#MytestModule"
-            },
-            // User Feature
-            {
-                "path": "feature\/userfeature",
-                "loadChildren": ".\/pages\/components\/feature\/userfeature\/userfeature.module#UserFeatureModule"
-            },
-            {
-                "path": "feature\/userfeatureaccess",
-                "loadChildren": ".\/pages\/components\/feature\/userfeatureaccess\/userfeatureaccess.module#UserFeatureAccessModule"
-            },
-            // Driver Information
-            {
-                "path": "driver\/adddriver",
-                "loadChildren": ".\/pages\/components\/driver\/adddriver\/addDriver.module#AddDriverModule"
-            },
-            {
-                "path": "driver\/adddriver\/:id",
-                "loadChildren": ".\/pages\/components\/driver\/adddriver\/addDriver.module#AddDriverModule"
-            },
-            {
-                "path": "driver\/fetchdriver",
-                "loadChildren": ".\/pages\/components\/driver\/fetchdriver\/fetchDriver.module#FetchDriverModule"
-            },
-
-            //
+          
+           
+           
+            // start theme routing ------------------------------------------------------------
             {
                 "path": "angular\/ng-bootstrap",
                 "loadChildren": ".\/pages\/default\/angular\/ng-bootstrap\/ng-bootstrap.module#NgBootstrapModule"

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using ERP.BusinessAccessLayer.Interface;
 using ERP.BusinessObjects.Settings;
 using ERP.BusinessObjects.User;
-using ERP.BusinessObjects.UserFeature;
+using ERP.BusinessObjects.Common;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -35,10 +35,14 @@ namespace ERP.Web.Controllers.API
         {
             var user = await _userManager.Authenticate(userDto.Email, userDto.Password);
 
-            List<UserFeatureAccessModel> MenuList = new List<UserFeatureAccessModel>();
-            if (user != null)
-                MenuList = await _userManager.GetMenuList(user.Id);
+            List<MenuList> MenuList = new List<MenuList>();
+			      List<ModuleList> ModuleList = new List<ModuleList>();
 
+			if (user != null)
+			{
+				MenuList = await _userManager.GetMenuList(user.Id);//pass userid for the get menu list from paricular user.
+				ModuleList = await _userManager.GetModuleList();
+			}
             if (user == null)
                 return Unauthorized();
 
@@ -57,20 +61,15 @@ namespace ERP.Web.Controllers.API
             var tokenString = tokenHandler.WriteToken(token);
 
            // return basic user info(without password) and token to store client side
-            var DistModule = MenuList.Select(p => p.ModuleName).Distinct();
-            List<UserFeatureAccessModel> ModuleList = new List<UserFeatureAccessModel>();
-            foreach (var item in DistModule)
-            {
-                ModuleList.Add(MenuList.Where(p => p.ModuleName == item).FirstOrDefault());
-            }
+          
             return Ok(new
             {
                 Id = user.Id,
                 FullName = user.FullName,
                 Email = user.Email,
                 Token = tokenString,
-                ModuleList = ModuleList,
-                MenuList = MenuList
+							  ModuleList = ModuleList,
+								MenuList = MenuList
             });
         }
     }

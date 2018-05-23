@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Bhavdip\Angular Project\vs2017\erp\ERP.Web\src\styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! D:\Bhavdip\Angular Project\vs2017\ERP\ERP.Web\src\styles.scss */"./src/styles.scss");
 
 
 /***/ })

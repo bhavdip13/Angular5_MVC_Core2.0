@@ -72,17 +72,13 @@ namespace ERP.Web
             });
             services.AddScoped<IUserManager, UserManager>();
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IDriverInformationManager, DriverInformnionManager>();
-            services.AddScoped<IDriverInformationRepository, DriverInformationRepository>();
-            services.AddScoped<IOrganisationManager, OrganisationManager>();
-            services.AddScoped<IOrganisationRepository, OrganisationRepository>();
+           
+           
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ICommonRepository, CommonRepository>();
             services.AddScoped<ICommonManager, CommonManager>();
-            services.AddScoped<IDriverShortagesRepository, DriverShortagesRepository>();
-            services.AddScoped<IDriverShortagesManager, DriverShortagesManager>();
-            services.AddScoped<IUserFeatureManager, UserFeatureManager>();
-            services.AddScoped<IUserFeatureRepository, UserFeatureRepository>();
+          
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,37 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="src\app\theme\pages\directives\**" />
+    <Compile Remove="src\app\theme\pages\pipes\**" />
     <Compile Remove="wwwroot\**" />
+    <Content Remove="src\app\theme\pages\directives\**" />
+    <Content Remove="src\app\theme\pages\pipes\**" />
     <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="src\app\theme\pages\directives\**" />
+    <EmbeddedResource Remove="src\app\theme\pages\pipes\**" />
     <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="src\app\theme\pages\directives\**" />
+    <None Remove="src\app\theme\pages\pipes\**" />
     <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="src\app\theme\pages\components\driver\adddriver\addDriver.component.ts" />
-    <None Remove="src\app\theme\pages\components\driver\adddriver\addDriver.module.ts" />
-    <None Remove="src\app\theme\pages\components\driver\fetchdriver\fetchDriver.component.ts" />
-    <None Remove="src\app\theme\pages\components\driver\fetchdriver\fetchDriver.module.ts" />
     <None Remove="src\app\theme\pages\models\currentuserdatamodel.ts" />
     <None Remove="src\app\theme\pages\models\defaultdatamodel.ts" />
-    <None Remove="src\app\theme\pages\models\driverinformation.ts" />
     <None Remove="src\app\theme\pages\models\index.ts" />
-    <None Remove="src\app\theme\pages\models\organisation.ts" />
-    <None Remove="src\app\theme\pages\models\permission.model.ts" />
     <None Remove="src\app\theme\pages\models\user.ts" />
-    <None Remove="src\app\theme\pages\models\userfeatureaccessmodel.ts" />
-    <None Remove="src\app\theme\pages\models\userfeaturemappingmodel.ts" />
-    <None Remove="src\app\theme\pages\models\usermenu.ts" />
     <None Remove="src\app\theme\pages\services\account.service.ts" />
-    <None Remove="src\app\theme\pages\services\driverinformation.service.ts" />
-    <None Remove="src\app\theme\pages\services\organisation.service.ts" />
     <None Remove="src\app\theme\pages\services\userfeature.service.ts" />
     <None Remove="src\app\theme\pages\shared\shared.module.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="src\app\theme\pages\directives\" />
-    <Folder Include="src\app\theme\pages\pipes\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,27 +47,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="src\app\theme\pages\components\driver\adddriver\addDriver.component.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\components\driver\adddriver\addDriver.module.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\components\driver\fetchdriver\fetchDriver.component.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\components\driver\fetchdriver\fetchDriver.module.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\components\feature\userfeatureaccess\userfeatureaccess.component.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\components\feature\userfeatureaccess\userfeatureaccess.module.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\components\feature\userfeature\userfeature.component.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\components\feature\userfeature\userfeature.module.ts" />
     <TypeScriptCompile Include="src\app\theme\pages\models\currentuserdatamodel.ts" />
     <TypeScriptCompile Include="src\app\theme\pages\models\defaultdatamodel.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\models\driverinformation.ts" />
     <TypeScriptCompile Include="src\app\theme\pages\models\index.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\models\organisation.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\models\permission.model.ts" />
     <TypeScriptCompile Include="src\app\theme\pages\models\user.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\models\userfeatureaccessmodel.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\models\userfeaturemappingmodel.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\models\usermenu.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\services\account.service.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\services\driverinformation.service.ts" />
-    <TypeScriptCompile Include="src\app\theme\pages\services\organisation.service.ts" />
     <TypeScriptCompile Include="src\app\theme\pages\shared\shared.module.ts" />
   </ItemGroup>
 
